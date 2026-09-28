@@ -1,0 +1,64 @@
+--Q1
+  SELECT first_name AS 'First Name',
+    last_name AS 'Last Name'
+  FROM employees;
+
+--Q2
+  SELECT DISTINCT department_id
+FROM employees;
+
+--Q3
+  SELECT * FROM employees
+ORDER BY first_name DESC;
+
+--Q4
+   SELECT first_name,last_name,salary * 0.15 AS PF FROM employees;
+
+--Q5
+  SELECT employee_id,first_name,last_name,salary FROM employees ORDER BY salary ASC;
+
+--Q6
+SELECT SUM(salary) AS 'Total Salary'
+FROM employees;
+--Q7
+  SELECT MAX(salary) AS 'Maximum Salary', MIN(salary) AS 'Minimum Salary'
+FROM employees;
+
+--Q8
+  SELECT AVG(salary) AS 'Average Salary', COUNT(*) AS 'Number of Employees'
+FROM employees;
+
+--Q9
+  SELECT COUNT(*) AS 'Number of Employees' FROM employees;
+
+--Q10
+  SELECT COUNT(DISTINCT job_id) AS 'Number of Jobs'
+FROM employees;
+
+--Q11
+  SELECT UPPER(first_name) AS 'First Name' FROM employees;
+
+--Q12
+   SELECT SUBSTRING(first_name, 1, 3) AS 'First 3 Characters' FROM employees;
+
+--Q13
+  SELECT 171 * 214 + 625 AS Result;
+
+--Q14
+  SELECT CONCAT(first_name, ' ', last_name) AS 'Employee Name' FROM employees;
+
+--Q15
+   SELECT TRIM(first_name) AS 'First Name' FROM employees;
+
+--Q16
+ SELECT first_name,last_name,LENGTH(first_name) AS 'First Name Length'LENGTH(last_name) AS 'Last Name Length'
+FROM employees;
+
+--Q17
+SELECT first_name FROM employees WHERE first_name REGEXP '[0-9]';
+
+--Q18
+  SELECT * FROM employees LIMIT 10;
+
+--Q19
+  SELECT employee_id,last_name,ROUND(salary/12,2) AS Monthly_Salary FROM employees;
